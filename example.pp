@@ -1,13 +1,5 @@
 class profile::windows::baseline {
-  include profile::windows::chocolatey
-
-  #PACKAGES
-  Package {
-    ensure   => installed,
-    provider => chocolatey,
-    require  => Class['chocolatey'],
-  }
-
+  
   package { 'Firefox': }
   package { 'notepadplusplus': }
   package { '7zip': }
