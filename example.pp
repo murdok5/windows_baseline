@@ -1,4 +1,10 @@
 class profile::windows::baseline {
+
+  # PACKAGES
+  Package {
+    ensure   => installed,
+    provider => chocolatey,
+  }
   
   package { 'Firefox': }
   package { 'notepadplusplus': }
